@@ -19,7 +19,7 @@ public class CommandLineUtils {
             if (option.requiresArgument() && !parse.has(option)) {
                 System.out.println("Miss request args: " + option.options().get(0));
                 parser.printHelpOn(System.out);
-
+                System.exit(-1);
             }
         }
     }
